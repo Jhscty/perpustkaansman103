@@ -1,0 +1,324 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f0f4f8;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Header */
+header {
+    background-color: #007bff;
+    padding: 10px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo img {
+    height: 40px;
+    cursor: pointer;
+}
+
+#toggleTheme {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Section Styling */
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.section h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+/* Facilities Section */
+.facility-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+}
+
+.facility-item {
+    background-color: #e9f5ff;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.facility-item h3 {
+    color: #007bff;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Contact Section Styling */
+.contact-details {
+    text-align: left;
+    max-width: 600px;
+    width: 100%;
+}
+
+.contact-info {
+    list-style: none;
+    padding: 10px 0;
+}
+
+.contact-info li {
+    padding: 5px 0;
+    font-size: 1.1em;
+}
+
+.contact-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #e9ecef;
+    color: #333;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.footer-links a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #000;
+    color: #fff;
+}
+
+.dark-mode header {
+    background-color: #00b8d4;
+}
+
+.dark-mode #toggleTheme {
+    background-color: #00b8d4;
+}
+
+.dark-mode .footer-links a,
+.dark-mode .contact-info a {
+    color: #00b8d4;
+}
+
+.dark-mode footer {
+    background-color: #222;
+    color: #ccc;
+}
+
+/* General Styles */
+.content-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #003366;
+    font-size: 2em;
+}
+
+h3 {
+    color: #00509E;
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+/* Organizational Structure */
+.org-chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.org-level {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.org-box {
+    background-color: #D9E4EC;
+    border: 2px solid #003366;
+    padding: 15px 20px;
+    margin: 5px;
+    border-radius: 10px;
+    min-width: 150px;
+    font-size: 1em;
+    transition: transform 0.3s ease;
+}
+
+.org-box.highlight {
+    background-color: #FFD700;
+}
+
+.org-box:hover {
+    transform: scale(1.05);
+}
+
+/* Staff Profiles */
+.staff-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.staff-card {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.staff-card:hover {
+    transform: translateY(-10px);
+}
+
+.staff-card img {
+    width: 100%;
+    height: auto;
+}
+
+.staff-card h4 {
+    margin: 10px 0 5px;
+    color: #003366;
+}
+
+.staff-card p {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+/* Fade-in Animation */
+.content-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.content-section.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+html {
+    scroll-behavior: smooth;
+}
+
+.content-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.content-section.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Dark Mode Customization */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-mode .footer, .dark-mode .header {
+    background-color: #1e1e1e;
+}
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* White text */
+}
+
+/* Apply to blue elements */
+body.dark-mode .section-title, 
+body.dark-mode nav a, 
+body.dark-mode .footer {
+    color: #cccccc; /* Light gray for links and titles */
+}
+
+body.dark-mode .staff-card {
+    background-color: #333333; /* Dark background for staff cards */
+    color: #ffffff; /* White text */
+}
+
+/* Ensure smooth transitions */
+* {
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+/* Light mode color for blue box */
+.blue-box {
+    background-color: #007bff; /* Light blue */
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px;
+  }
+  
+  /* Dark mode color for blue box */
+  .dark-mode .blue-box {
+    background-color: #003366; /* Darker blue for dark mode */
+    color: #ffffff;
+  }
+  
