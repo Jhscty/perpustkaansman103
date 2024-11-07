@@ -23,84 +23,49 @@ document.addEventListener("DOMContentLoaded", () => {
     setupThemeToggle();
     setupSmoothScroll();
     setupSearch();
-    displayBooks(); // Display all books initially
-    setupFadeIn();
+    displayBooks(); 
 });
 
 function setupThemeToggle() {
     const toggleButton = document.getElementById("toggleTheme");
     const currentTheme = localStorage.getItem("theme");
-
-    if (currentTheme === "dark") {
-        document.body.classList.add("dark-mode");
-        toggleButton.textContent = "Switch to Light Mode";
-    } else {
-        toggleButton.textContent = "Switch to Dark Mode";
-    }
+    document.body.classList.toggle("dark-mode", currentTheme === "dark");
+    toggleButton.textContent = currentTheme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
 
     toggleButton.addEventListener("click", () => {
-        document.body.classList.toggle("dark-mode");
-        const theme = document.body.classList.contains("dark-mode") ? "dark" : "light";
-        localStorage.setItem("theme", theme);
-        toggleButton.textContent = theme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
+        const isDarkMode = document.body.classList.toggle("dark-mode");
+        toggleButton.textContent = isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode";
+        localStorage.setItem("theme", isDarkMode ? "dark" : "light");
     });
 }
 
 function setupSmoothScroll() {
     document.querySelectorAll("nav a").forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
+        anchor.addEventListener("click", (e) => {
             e.preventDefault();
-            const targetId = this.getAttribute("href");
-            const targetSection = document.querySelector(targetId);
-
-            window.scrollTo({
-                top: targetSection.offsetTop,
-                behavior: "smooth"
-            });
+            document.querySelector(e.target.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
         });
     });
 }
 
 function setupSearch() {
-    document.getElementById("searchButton").addEventListener("click", () => {
-        const searchTerm = document.getElementById("searchInput").value.toLowerCase();
-        const filteredBooks = books.filter(book =>
-            book.title.toLowerCase().includes(searchTerm) || book.author.toLowerCase().includes(searchTerm)
-        );
-        displayBooks(filteredBooks);
+    const searchButton = document.getElementById("searchButton");
+    const searchInput = document.getElementById("searchInput");
+    
+    searchButton.addEventListener("click", searchBooks);
+    searchInput.addEventListener("keyup", (event) => {
+        if (event.key === "Enter") searchBooks();
     });
+}
+
+function searchBooks() {
+    const searchTerm = document.getElementById("searchInput").value.toLowerCase();
+    const filteredBooks = books.filter(book => book.title.toLowerCase().includes(searchTerm));
+    displayBooks(filteredBooks);
 }
 
 function displayBooks(bookArray = books) {
     const bookList = document.getElementById("bookList");
-    bookList.innerHTML = ""; // Clear previous entries
-
-    if (bookArray.length === 0) {
-        bookList.innerHTML = "<p>No books found.</p>";
-    } else {
-        bookArray.forEach(book => {
-            const bookItem = document.createElement("div");
-            bookItem.classList.add("book-item");
-            bookItem.innerHTML = `<h3>${book.title}</h3><p>by ${book.author}</p>`;
-            bookList.appendChild(bookItem);
-        });
-    }
+    bookList.innerHTML = bookArray.map(book => `<div class="book-item"><h3>${book.title}</h3><p>${book.author}</p></div>`).join("");
 }
 
-function setupFadeIn() {
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("fade-in");
-            }
-        });
-    }, { threshold: 0.5 });
-
-    document.querySelectorAll(".section").forEach(section => {
-        observer.observe(section);
-    });
-}
-function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
-  }
-  

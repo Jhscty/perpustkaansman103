@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <!-- Dark Mode Toggle -->
     <button id="toggleTheme">Switch to Dark Mode</button>
 
     <!-- Navbar with Logo -->
     <header>
         <nav>
-            <a href="#home" class="logo"><img src="Logo.png" alt="Library Logo"></a>
+            <a href="#home" class="logo"><img src="logosega.png" alt="Library Logo"></a>
             <h1>Library SMAN 103 Jakarta</h1>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -25,153 +26,66 @@
         </nav>
     </header>
 
-    <!-- Home Section -->
-    <section id="home" class="section">
-        <h2>Welcome to Our Library</h2>
-        <p>Explore a wealth of knowledge and resources at the SMAN 103 Jakarta Library.</p>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section">
-        <h2>About Our Library</h2>
-        <p>Established in 1990, SMAN 103 Jakarta Library offers an extensive collection of books, e-resources, and modern facilities to support academic excellence.</p>
-    </section>
-
-    <!-- Facilities Section with Detailed Content -->
+    <!-- Main Sections -->
+    <section id="home" class="section"> <h2>Welcome to Our Library</h2> <p>Selamat Datang di Portal Perpustakaan Digital.</p> </section>
+    <section id="about" class="section"> <h2>About Our Library</h2> <p></p>Perpustakaan SMAN 103 JAKARTA, merupakan salah satu fasilitas sekolah agar siswa dapat dengan mudah menggali ilmu di sekolah.</section>
     <section id="facilities" class="section">
         <h2>Our Facilities</h2>
         <div class="facility-list">
-            <div class="facility-item">
-                <h3>Reading Area</h3>
-                <p>A quiet and comfortable space for focused reading and study sessions.</p>
-            </div>
-            <div class="facility-item">
-                <h3>Computer Access</h3>
-                <p>High-speed internet and research computers available for academic research and projects.</p>
-            </div>
-            <div class="facility-item">
-                <h3>Group Study Rooms</h3>
-                <p>Private rooms available for group study, discussions, and collaborative projects.</p>
-            </div>
-            <div class="facility-item">
-                <h3>Printing & Scanning Services</h3>
-                <p>On-site printing, photocopying, and scanning services for students and staff.</p>
-            </div>
-            <div class="facility-item">
-                <h3>Digital Resources</h3>
-                <p>Access to e-books, academic journals, and digital learning resources.</p>
-            </div>
-            <div class="facility-item">
-                <h3>Free Wi-Fi</h3>
-                <p>Complimentary Wi-Fi for all library visitors to stay connected.</p>
-            </div>
-            <div class="facility-item">
-                <h3>Event Space</h3>
-                <p>A dedicated area for hosting events, workshops, and educational sessions.</p>
-            </div>
+            <div class="facility-item"><h3>Reading Area</h3><p>Quiet space for reading and study.</p></div>
+            <div class="facility-item"><h3>Computer Access</h3><p>High-speed internet and research computers.</p></div>
+            <div class="facility-item"><h3>Group Study Rooms</h3><p>Rooms for collaborative projects.</p></div>
+            <div class="facility-item"><h3>Printing & Scanning</h3><p>On-site services for students and staff.</p></div>
+            <div class="facility-item"><h3>Digital Resources</h3><p>Access to e-books, journals, and resources.</p></div>
+            <div class="facility-item"><h3>Free Wi-Fi</h3><p>Complimentary Wi-Fi for all visitors.</p></div>
+            <div class="facility-item"><h3>Event Space</h3><p>For workshops and educational events.</p></div>
         </div>
     </section>
-
-    <!-- Books Section -->
     <section id="books" class="section">
         <h2>Book Collection</h2>
         <div class="search-bar">
             <input type="text" id="searchInput" placeholder="Search books by title...">
             <button id="searchButton">Search</button>
         </div>
-        <div id="bookList">
-            <!-- Books will load here dynamically -->
-        </div>
-    </section>
-
-    <!-- Clean Contact Section -->
-    <section id="contact" class="section">
-        <h2>Contact Us</h2>
-        <div class="contact-details">
-            <p>We’re here to help with any inquiries or assistance you may need.</p>
-            <ul class="contact-info">
-                <li><strong>Email:</strong> <a href="mailto:library@sman103.ac.id">library@sman103.ac.id</a></li>
-                <li><strong>Phone:</strong> (021) 123-4567</li>
-                <li><strong>Address:</strong> Jl. Example No. 103, Jakarta</li>
-                <li><strong>Hours:</strong> Mon-Fri: 8am - 5pm</li>
-            </ul>
-        </div>
+        <div id="bookList"></div>
     </section>
 
     <section id="organization-structure" class="content-section">
-        <h2>Struktur Organisasi Perpustakaan</h2>
+        <h2>Struktur Organisasi</h2>
         <h3>SMA Islam Kepanjen</h3>
         <div class="org-chart">
-            <div class="org-level">
-                <div class="org-box">Kepala Sekolah<br><strong>Saiful Afnin, S.Pd</strong></div>
-            </div>
-            <div class="org-level">
-                <div class="org-box">Kepala Perpustakaan<br><strong>Chamdi Fajar, S.IP</strong></div>
-            </div>
+            <div class="org-level"><div class="org-box">Kepala Sekolah<br><strong>Saiful Afnin, S.Pd</strong></div></div>
+            <div class="org-level"><div class="org-box">Kepala Perpustakaan<br><strong>Chamdi Fajar, S.IP</strong></div></div>
             <div class="org-level">
                 <div class="org-box">Layanan Teknis<br><strong>Sri Mujaidah</strong></div>
                 <div class="org-box">Layanan Pemustaka<br><strong>Wakidatul Romlah, S.Pd</strong></div>
                 <div class="org-box">Layanan TIK<br><strong>Wasis Tri Atmojo, S.Kom</strong></div>
             </div>
-            <div class="org-level">
-                <div class="org-box highlight">Duta Baca Perpustakaan</div>
-                <div class="org-box highlight">Sahabat Perpustakaan</div>
-            </div>
+            <div class="org-level"><div class="org-box highlight">Duta Baca Perpustakaan</div><div class="org-box highlight">Sahabat Perpustakaan</div></div>
         </div>
     </section>
-    
     <section id="our-staff" class="content-section">
         <h2>Pustakawan</h2>
-        <h3>Para Petugas Kami</h3>
         <div class="staff-container">
-            <div class="staff-card">
-                <img src="images/staff1.jpg" alt="Chamdi Fajar, S.IP">
-                <h4>Chamdi Fajar, S.IP</h4>
-                <p>Kepala Perpustakaan</p>
-            </div>
-            <div class="staff-card">
-                <img src="images/staff2.jpg" alt="Sri Mujaidah">
-                <h4>Sri Mujaidah</h4>
-                <p>Layanan Teknis</p>
-            </div>
-            <div class="staff-card">
-                <img src="images/staff3.jpg" alt="Wakidatul Romlah, S.Pd">
-                <h4>Wakidatul Romlah, S.Pd</h4>
-                <p>Layanan Pemustaka</p>
-            </div>
-            <div class="staff-card">
-                <img src="images/staff4.jpg" alt="Wasis Tri Atmojo, S.Kom">
-                <h4>Wasis Tri Atmojo, S.Kom</h4>
-                <p>Layanan TIK</p>
-            </div>
+            <div class="staff-card"><img src="images/staff1.jpg" alt="Chamdi Fajar, S.IP"><h4>Chamdi Fajar, S.IP</h4><p>Kepala Perpustakaan</p></div>
+            <div class="staff-card"><img src="images/staff2.jpg" alt="Sri Mujaidah"><h4>Sri Mujaidah</h4><p>Layanan Teknis</p></div>
+            <div class="staff-card"><img src="images/staff3.jpg" alt="Wakidatul Romlah, S.Pd"><h4>Wakidatul Romlah, S.Pd</h4><p>Layanan Pemustaka</p></div>
+            <div class="staff-card"><img src="images/staff4.jpg" alt="Wasis Tri Atmojo, S.Kom"><h4>Wasis Tri Atmojo, S.Kom</h4><p>Layanan TIK</p></div>
         </div>
     </section>
-    
-    <!-- Repositioned Staff Section Before Contact -->
-<section id="our-staff" class="content-section">
-    <h2>Pustakawan</h2>
-    <h3>Para Petugas Kami</h3>
-    <div class="staff-container">
-        <!-- Staff Card Example -->
-        <div class="staff-card">
-            <img src="images/staff1.jpg" alt="Chamdi Fajar, S.IP">
-            <h4>Chamdi Fajar, S.IP</h4>
-            <p>Kepala Perpustakaan</p>
-        </div>
-        <!-- More staff cards as needed... -->
-    </div>
-</section>
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <ul class="contact-info">
+            <li><strong>Email:</strong> <a href="mailto:library@sman103.ac.id">library@sman103.ac.id</a></li>
+            <li><strong>Phone:</strong> (021) 123-4567</li>
+            <li><strong>Address:</strong> Jl. Example No. 103, Jakarta</li>
+            <li><strong>Hours:</strong> Mon-Fri: 8am - 5pm</li>
+        </ul>
 
-<section id="contact" class="section">
-    <h2>Contact Us</h2>
-    <!-- Contact details -->
-</section>
+    </section>
 
-<div class="blue-box">This is the blue box content</div>
-<button onclick="toggleDarkMode()">Toggle Dark Mode</button>
-
-    <!-- Footer with Custom Links -->
-    <footer>
+    <!-- Footer -->
+    <footer class="footer">
         <div class="footer-links">
             <a href="https://example.com/link1">Link 1</a>
             <a href="https://example.com/link2">Link 2</a>
@@ -179,30 +93,6 @@
         </div>
         <p>&copy; 2024 Library SMAN 103 Jakarta. All rights reserved.</p>
     </footer>
-
-    <footer id="contact" class="footer">
-    <div class="contact-info">
-        <h3>Contact Us</h3>
-        <p>Email: <a href="mailto:library@example.com">library@example.com</a></p>
-        <p>Phone: (123) 456-7890</p>
-        <p>Address: SMA Islam Kepanjen, Your City, Your Country</p>
-    </div>
-</footer><!-- Footer Section -->
-<footer class="footer">
-    <div class="footer-links">
-        <a href="https://example.com/link1">Link 1</a>
-        <a href="https://example.com/link2">Link 2</a>
-        <a href="https://example.com/link3">Link 3</a>
-    </div>
-    <div class="contact-info">
-        <p>&copy; 2024 Library SMAN 103 Jakarta. All rights reserved.</p>
-        <h3>Contact Us</h3>
-        <p>Email: <a href="mailto:library@sman103.ac.id">library@sman103.ac.id</a></p>
-        <p>Phone: (021) 123-4567</p>
-        <p>Address: Jl. Example No. 103, Jakarta</p>
-    </div>
-</footer>
-
 
     <script src="script.js"></script>
 </body>
