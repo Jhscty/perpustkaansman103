@@ -39,12 +39,12 @@ setInterval(() => {
     const image2 = document.getElementById('image2');
 
     if (currentImage === 1) {
-        image1.style.opacity = 0; // Sembunyikan gambar pertama
-        image2.style.opacity = 1; // Tampilkan gambar kedua
+        image1.style.opacity = 0;
+        image2.style.opacity = 1;
         currentImage = 2;
     } else {
-        image1.style.opacity = 1; // Tampilkan gambar pertama
-        image2.style.opacity = 0; // Sembunyikan gambar kedua
+        image1.style.opacity = 1;
+        image2.style.opacity = 0;
         currentImage = 1;
     }
-}, 3000); // Ganti gambar setiap 10 detik
+}, 3000);
