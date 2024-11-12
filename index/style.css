@@ -6,7 +6,7 @@
     font-family: 'JetBrains Mono', monospace;
 }
 body {
-    background-color: #000;
+    background-color: white;
     min-height: 200vh;
 }
 header {
@@ -315,4 +315,26 @@ header ul li a:hover, header.sticky .bars-btn:hover {
     .banner-content h2 {
         font-size: 1em;
     }
+}
+
+/* MAP */
+.map h1 {
+    color: black;
+    font-size: 3em;
+    text-align: center; 
+    margin: 4em auto 1.5em;
+    position: relative;
+}
+
+.map h1::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 4px;
+    background-color: rgb(59, 53, 53);
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px;
 }

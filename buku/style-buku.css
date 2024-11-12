@@ -176,6 +176,7 @@ header ul li a:hover, header.sticky .bars-btn:hover {
     justify-content: flex-start;
     align-items: center;
     height: 100vh;
+    margin: 0 20px;
 }
 
 .search-container h2 {
@@ -205,18 +206,22 @@ header ul li a:hover, header.sticky .bars-btn:hover {
     justify-content: center;
     background-color: white;
     border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
     padding: 8px;
     width: 600px;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .search-container form input[type="text"] {
     border: none;
     outline: none;
     flex: 1;
-    padding: 8px;
+    padding: 8px 10px;
     font-size: 16px;
     color: #555;
+    min-width: 0;
+    box-sizing: border-box;
 }
 
 .search-container form input[type="text"]::placeholder {
@@ -229,8 +234,14 @@ header ul li a:hover, header.sticky .bars-btn:hover {
     color: #888;
     font-size: 18px;
     cursor: pointer;
+    padding: 0 10px;
+    width: 50px;
 }
 
 .search-container form button:hover {
     color: #555;
+}
+
+.search-container form button i {
+    font-size: 20px;
 }
