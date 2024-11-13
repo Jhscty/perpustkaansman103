@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/logo.png">
+    <link rel="stylesheet" href="style-buku.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Perpustakaan 103</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="/assets/logo.png" alt="Perpustakaan SEGA Logo">
+            Perpustakaan SEGA
+        </a>
+        <ul>
+            <li><a href="/index/index.html" onclick="toggleMenu()">Beranda</a></li>
+            <li><a href="#">Buku</a></li>
+            <li><a href="/informasi/informasi.html">Informasi</a></li>
+            <li><a href="/pustakawan/pustakawan.html">Pustakawan</a></li>
+            <li><a href="/tentang/tentang.html">Tentang</a></li>
+        </ul>
+        <div class="bars-btn" id="bars-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="dropdown-menu">
+            <ul>
+                <li><a href="/index/index.html" onclick="toggleMenu()">Beranda</a></li>
+                <li><a href="#">Buku</a></li>
+                <li><a href="/informasi/informasi.html">Informasi</a></li>
+                <li><a href="/pustakawan/pustakawan.html">Pustakawan</a></li>
+                <li><a href="/tentang/tentang.html">Tentang</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="search-container">
+        <h2>Koleksi Buku</h2>
+        <form>
+            <input type="text" id="search-box" placeholder="Masukkan kata kunci untuk mencari buku">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+    </div>
+
+    <script src="/buku/script-buku.js"></script>
+</body>
+</html>

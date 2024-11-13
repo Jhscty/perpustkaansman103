@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/logo.png">
+    <link rel="stylesheet" href="style-informasi.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Perpustakaan 103</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="/assets/logo.png" alt="Perpustakaan SEGA Logo">
+            Perpustakaan SEGA
+        </a>
+        <ul>
+            <li><a href="/index/index.html" onclick="toggleMenu()">Beranda</a></li>
+            <li><a href="/buku/buku.html">Buku</a></li>
+            <li><a href="#">Informasi</a></li>
+            <li><a href="/pustakawan/pustakawan.html">Pustakawan</a></li> 
+            <li><a href="/tentang/tentang.html">Tentang</a></li>
+        </ul>
+        <div class="bars-btn" id="bars-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="dropdown-menu">
+            <ul>
+                <li><a href="/index/index.html" onclick="toggleMenu()">Beranda</a></li>
+                <li><a href="/buku/buku.html">Buku</a></li>
+                <li><a href="#">Informasi</a></li>
+                <li><a href="/pustakawan/pustakawan.html">Pustakawan</a></li> 
+                <li><a href="/tentang/tentang.html">Tentang</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="facilities">
+        <h2>Our Facilities</h2>
+        <div class="facility-container">
+            <div class="facility-box" onclick="openModal('Facility 1', 'Description of Facility 1.')">
+                <h3>Facility 1</h3>
+            </div>
+            <div class="facility-box" onclick="openModal('Facility 2', 'Description of Facility 2.')">
+                <h3>Facility 2</h3>
+            </div>
+            <div class="facility-box" onclick="openModal('Facility 3', 'Description of Facility 3.')">
+                <h3>Facility 3</h3>
+            </div>
+            <div class="facility-box" onclick="openModal('Facility 4', 'Description of Facility 4.')">
+                <h3>Facility 4</h3>
+            </div>
+        </div>  
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
+    <script src="script-informasi.js"></script>
+</body>
+</html>
