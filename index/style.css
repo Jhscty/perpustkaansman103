@@ -326,48 +326,6 @@ header ul li a:hover, header.sticky .bars-btn:hover {
 }
 
 /* MAP */
-.map-container {
-    display: flex;
-    justify-content: center; /* Menyusun elemen di tengah */
-    align-items: flex-start; /* Menyusun elemen di bagian atas */
-    flex-wrap: wrap; /* Membuat elemen membungkus saat layar kecil */
-    margin: 0 auto; /* Centering container */
-    max-width: 1200px; /* Maksimal lebar container */
-    padding: 20px; /* Menambahkan padding di sekitar container */
-}
-
-.map-container iframe {
-    flex: 1 1 600px; /* Fleksibel, minimal 600px */
-    max-width: 50%; /* Agar tidak melampaui lebar container */
-    height: 450px; /* Tinggi peta */
-    margin-right: 20px; /* Menambahkan jarak antara peta dan konten */
-    margin-left: 20px; /* Menambahkan jarak kiri */
-    border: 2px solid #ccc; /* Menambahkan border untuk membedakan peta */
-    border-radius: 8px; /* Membuat sudut peta menjadi melengkung */
-}
-
-.map-content {
-    flex: 1 1 400px; /* Fleksibel, minimal 400px */
-    padding: 20px; /* Ruang di sekitar konten */
-}
-
-.map-content h2 {
-    font-size: 2.5em; /* Memperbesar ukuran font h2 */
-    margin-bottom: 15px; /* Menambahkan jarak di bawah h2 */
-}
-
-.map-content h5 {
-    font-size: 1.2em; /* Memperbesar ukuran font h5 */
-    text-align: justify;
-    font-weight: 400;
-    margin-bottom: 10px; /* Menambahkan jarak di bawah h5 */
-}
-
-.map-content p {
-    font-size: 1.3em;
-    margin-bottom: 10px; /* Menambahkan jarak di bawah paragraf */
-}
-
 .map h1 {
     color: black;
     font-size: 3em;
@@ -388,6 +346,47 @@ header ul li a:hover, header.sticky .bars-btn:hover {
     right: 0;
     bottom: -10px;
 }
+.map-container {
+    display: flex;
+    justify-content: center; /* Menyusun elemen di tengah */
+    align-items: flex-start; /* Menyusun elemen di bagian atas */
+    flex-wrap: wrap; /* Membuat elemen membungkus saat layar kecil */
+    margin: 0 auto; /* Centering container */
+    max-width: 1000px; /* Maksimal lebar container */
+    padding: 20px; /* Menambahkan padding di sekitar container */
+}
+.map-container iframe {
+    flex: 1 1 600px; /* Fleksibel, minimal 600px */
+    max-width: 21em; /* Agar tidak melampaui lebar container */
+    height: auto; /* Tinggi otomatis untuk menjaga rasio */
+    aspect-ratio: 1 / 1; /* Menjaga rasio 1:1 untuk kotak */
+    margin-right: 20px; /* Menambahkan jarak antara peta dan konten */
+    margin-left: 20px; /* Menambahkan jarak kiri */
+    border: 2px solid #ccc; /* Menambahkan border untuk membedakan peta */
+    border-radius: 8px; /* Membuat sudut peta menjadi melengkung */
+}
+
+.map-content {
+    flex: 1 1 400px; /* Fleksibel, minimal 400px */
+    padding: 10px; /* Ruang di sekitar konten */
+}
+
+.map-content h2 {
+    font-size: 1.5em; /* Memperbesar ukuran font h2 */
+    margin-bottom: 15px; /* Menambahkan jarak di bawah h2 */
+}
+
+.map-content h5 {
+    font-size: 1em; /* Memperbesar ukuran font h5 */
+    text-align: justify;
+    font-weight: 400;
+    margin-bottom: 10px; /* Menambahkan jarak di bawah h5 */
+}
+
+.map-content p {
+    font-size: 1.3em;
+    margin-bottom: 10px; /* Menambahkan jarak di bawah paragraf */
+}
 
 /* Media query untuk tampilan responsif */
 @media (max-width: 768px) {
@@ -402,9 +401,9 @@ header ul li a:hover, header.sticky .bars-btn:hover {
     iframe {
         order: 0; /* Mengatur urutan peta di atas konten */
         width: calc(100% - 40px); /* Mengatur lebar peta 100% dengan ruang */
-        width: auto;
-        height: 300px; /* Mengatur tinggi peta lebih kecil */
-        margin: 20px; /* Menambahkan margin di semua sisi */
+        height: auto; /* Tinggi otomatis untuk menjaga rasio */
+        aspect-ratio: 1 / 1; /* Menjaga rasio 1:1 untuk kotak */
+        margin: 0px; /* Menambahkan margin di semua sisi */
         padding: 10px; /* Menambahkan padding di sekitar peta */
         box-sizing: border-box; /* Agar padding tidak menambah lebar total */
     }
