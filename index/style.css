@@ -8,6 +8,9 @@
 body {
     background-color: white;
     min-height: 200vh;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
 }
 header {
     position: fixed;
@@ -179,6 +182,15 @@ header ul li a:hover, header.sticky .bars-btn:hover {
 #image2 {
     background-image: url(/assets/slide2.jpg);
 }
+#image3 {
+    background-image: url(/assets/slide3.jpg);
+}
+#image4 {
+    background-image: url(/assets/slide4.jpg);
+}
+#image5 {
+    background-image: url(/assets/slide5.jpg);
+}
 
 @keyframes change {
     0%, 50% {
@@ -212,7 +224,21 @@ header ul li a:hover, header.sticky .bars-btn:hover {
     overflow: hidden;
     width: 100%;
     height: 100vh;
-    text-align: center;
+    text-align: left;
+    background-color: rgb(37, 37, 37);
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 20%, rgb(37, 37, 37) 120%);
+    z-index: 2;
+    pointer-events: none;
+    filter: blur(10px);
 }
 
 .background-image {
@@ -227,16 +253,17 @@ header ul li a:hover, header.sticky .bars-btn:hover {
     opacity: 0;
     transition: opacity 1s ease-in-out;
     filter: blur(6px);
+    z-index: 1;   
 }
-
 .banner-content {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 8vh;
+    transform: translateY(-50%);
     color: white;
-    text-align: center;
+    text-align: left;
     text-transform: capitalize;
+    z-index: 3;
 }
 
 .banner-content h1 {
@@ -265,11 +292,9 @@ header ul li a:hover, header.sticky .bars-btn:hover {
     .banner-content h1 {
         font-size: 1.5em;
     }
-
     .banner-content span {
         font-size: 2.2em;
     }
-
     .banner-content h2 {
         font-size: 1.3em;
     }
@@ -279,11 +304,9 @@ header ul li a:hover, header.sticky .bars-btn:hover {
     .banner-content h1 {
         font-size: 1.3em;
     }
-
     .banner-content span {
         font-size: 2em;
     }
-
     .banner-content h2 {
         font-size: 1.2em;
     }
@@ -293,11 +316,9 @@ header ul li a:hover, header.sticky .bars-btn:hover {
     .banner-content h1 {
         font-size: 1.2em;
     }
-
     .banner-content span {
         font-size: 1.8em;
     }
-
     .banner-content h2 {
         font-size: 1.1em;
     }
@@ -307,11 +328,9 @@ header ul li a:hover, header.sticky .bars-btn:hover {
     .banner-content h1 {
         font-size: 1em;
     }
-
     .banner-content span {
         font-size: 1.5em;
     }
-
     .banner-content h2 {
         font-size: 1em;
     }
@@ -322,7 +341,7 @@ header ul li a:hover, header.sticky .bars-btn:hover {
     color: black;
     font-size: 3em;
     text-align: center; 
-    margin: 4em auto 1.5em;
+    margin: 2em auto 1.5em;
     position: relative;
 }
 
@@ -337,4 +356,66 @@ header ul li a:hover, header.sticky .bars-btn:hover {
     left: 0;
     right: 0;
     bottom: -10px;
+}
+.map-container {
+    display: flex;
+    justify-content: center; /* Menyusun elemen di tengah */
+    align-items: flex-start; /* Menyusun elemen di bagian atas */
+    flex-wrap: wrap; /* Membuat elemen membungkus saat layar kecil */
+    margin: 0 auto; /* Centering container */
+    max-width: 1000px; /* Maksimal lebar container */
+    padding: 20px; /* Menambahkan padding di sekitar container */
+}
+.map-container iframe {
+    flex: 1 1 600px; /* Fleksibel, minimal 600px */
+    max-width: 25em; /* Agar tidak melampaui lebar container */
+    height: auto; /* Tinggi otomatis untuk menjaga rasio */
+    aspect-ratio: 1 / 1; /* Menjaga rasio 1:1 untuk kotak */
+    margin-right: 20px; /* Menambahkan jarak antara peta dan konten */
+    margin-left: 20px; /* Menambahkan jarak kiri */
+    border: 2px solid #ccc; /* Menambahkan border untuk membedakan peta */
+    border-radius: 8px; /* Membuat sudut peta menjadi melengkung */
+}
+
+.map-content {
+    flex: 1 1 400px; /* Fleksibel, minimal 400px */
+    padding: 10px; /* Ruang di sekitar konten */
+}
+
+.map-content h2 {
+    font-size: 1.5em; /* Memperbesar ukuran font h2 */
+    margin-bottom: 15px; /* Menambahkan jarak di bawah h2 */
+}
+
+.map-content h5 {
+    font-size: 1em; /* Memperbesar ukuran font h5 */
+    text-align: justify;
+    font-weight: 400;
+    margin-bottom: 10px; /* Menambahkan jarak di bawah h5 */
+}
+
+.map-content p {
+    font-size: 1.3em;
+    margin-bottom: 10px; /* Menambahkan jarak di bawah paragraf */
+}
+
+/* Media query untuk tampilan responsif */
+@media (max-width: 768px) {
+    .map-container {
+        flex-direction: column; /* Mengubah arah menjadi kolom */
+        align-items: center;
+        padding: 10px; /* Menambahkan padding pada container */
+    }
+    .map-content {
+        order: 1; /* Mengatur urutan konten di bawah peta */
+    }
+    iframe {
+        order: 0; /* Mengatur urutan peta di atas konten */
+        width: calc(100% - 40px); /* Mengatur lebar peta 100% dengan ruang */
+        height: auto; /* Tinggi otomatis untuk menjaga rasio */
+        aspect-ratio: 1 / 1; /* Menjaga rasio 1:1 untuk kotak */
+        margin: 0px; /* Menambahkan margin di semua sisi */
+        padding: 10px; /* Menambahkan padding di sekitar peta */
+        box-sizing: border-box; /* Agar padding tidak menambah lebar total */
+    }
 }

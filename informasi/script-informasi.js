@@ -31,26 +31,20 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-// BANNER
-let currentImage = 1;
+function openModal(title, description) {
+    document.getElementById('modal-title').innerText = title;
+    document.getElementById('modal-description').innerText = description;
+    document.getElementById('modal').style.display = 'block';
+}
 
-setInterval(() => {
-    // Ambil semua gambar
-    const images = [
-        document.getElementById('image1'),
-        document.getElementById('image2'),
-        document.getElementById('image3'),
-        document.getElementById('image4'),
-        document.getElementById('image5')
-    ];
+function closeModal() {
+    document.getElementById('modal').style.display = 'none';
+}
 
-    images.forEach((image, index) => {
-        if (index + 1 === currentImage) {
-            image.style.opacity = 1; 
-        } else {
-            image.style.opacity = 0;
-        }
-    });
-
-    currentImage = currentImage < images.length ? currentImage + 1 : 1; // Jika sudah sampai gambar terakhir, kembali ke gambar pertama
-}, 3000);
+// Close the modal when clicking outside of the modal content
+window.onclick = function(event) {
+    const modal = document.getElementById('modal');
+    if (event.target === modal) {
+        closeModal();
+    }
+}
